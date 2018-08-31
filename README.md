@@ -3,7 +3,7 @@
 ## Description
 The objective of the game is to lead the brick trought the race without collisioning with other bricks.
 
-The player might dodge the obstacles during the race,the player has 3 oportunities to win the game. If there is a collision player will lose lives and lower the score.
+The player might dodge the obstacles during the race,the player has 3 oportunities to win the game. 
 
 
  • controllers:
@@ -11,6 +11,10 @@ The player might dodge the obstacles during the race,the player has 3 oportuniti
 	· <- and ->  to control the movement of the player  (left - right)
 	· [ Space ] To pause the game
 
+```
+winning: If the score is 100 the player wins!
+losing: If there is a collision the player will lose lives and lower the score.  If the score is 0 or the player has no lives. Loses! 
+```
 
 ## MVP (DOM - CANVAS)
 Canvas - Javascript
@@ -44,28 +48,67 @@ Classes and methods definition.
 
 - var game = newGame() {
     game.start();
-    game.onOver(function () {
-    gameOver(game.score);
-  }
-- buildGameOver(score) {
-    gameOverMain = buildDom(`
-      <main>
-        <h1>Game over</h1>
-        <p>Your score: <span></span></p>
-        <button>Restart</button>
-      </main>
-    `);
+    game.onOver();}
+- buildGameOver() {
+    gameOverMain = buildDom();
 - destroyGameOver();
 ```
 
 ### Game JS
+```
+- Game();
+- self.start();
+- self.canvas;
+- self.score;
+- self.width;
+- self.height;
+- self.player;
+- self.player.update();
+- self.player.draw();
+- self.enemies;
+- self.handleKeyDown();
+- self.startLoop();
+- loop();
+- self.checkCollision();
+- ctx;
+- onOver();
+- self.destroy();
+```
 
-- Game()
-- Game.prototype.start = function (){}
-- 
+### Player JS
+```
+- Player(){
+	self.canvas;
+	self.lives;
+	self.size;
+	self.x;
+	self.y;
+	self.direction;
+	self.speed;
+	self.ctx;
+}
+- setDirection();
+- collidesWithEnemy();
+- collided();
+- update();
+- draw();
+```
+### Enemy JS
+```
+- Enemy(){
+	self.canvas;
+	self.lives;
+	self.size;
+	self.x;
+	self.y;
+	self.speed;
+	self.ctx;
+}
 
-
-
+- update();
+- draw();
+- isInScreen();
+```
 ## States y States Transitions
 Definition of the different states and their transition (transition functions)
 
