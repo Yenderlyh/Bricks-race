@@ -120,13 +120,13 @@ Definition of the different states and their transition (transition functions)
 ## Task
 
 ### Main JS
- • buildDom()
- • Create the Main function
- - state transitions
- • buildSplash()
- • startGame() 
- • gameOver()
- • Win
+- buildDom()
+- Create the Main function
+- state transitions
+- buildSplash()
+- startGame() 
+- gameOver()
+- Win
  
 
 ### Game JS
