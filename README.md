@@ -3,7 +3,7 @@
 ## Description
 The objective of the game is to lead the brick trought the race without collisioning with other bricks.
 
-The player might dodge the obstacles during the race,the player has 3 oportunities to win the game. 
+The player might dodge the obstacles during the race and will only have 3 oportunities to win the game. 
 
 
  • controllers:
@@ -19,20 +19,20 @@ losing: If there is a collision the player will lose lives and lower the score. 
 ## MVP (DOM - CANVAS)
 Canvas - Javascript
 
- • Create player
- • Create enemyBrick
- • Create startLoop 
+- Create player
+- Create enemyBrick
+- Create startLoop 
 
 ## Backlog
- • Transition screen
- • Bonus: 
+- Transition screen
+- Bonus: 
 	·Time++
 	· Lives++
 	· Score ++ 
- • Pause 
- • Levels (Speed change)
- • Music
- • Design
+- Pause 
+- Levels (Speed change)
+- Music
+- Design
 	
 
 ## Data structure
