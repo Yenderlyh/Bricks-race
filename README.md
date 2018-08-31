@@ -11,9 +11,10 @@ The player has to dodge the obstacles during the race and will only have 3 oport
 	· <- and ->  to control the movement of the player  (left - right)
 	· [ Space ] To pause the game
 
-###winning: 
+### winning: 
 - If the score is 100 the player wins!
-###losing:
+
+### losing:
 - If there is a collision the player will lose lives and lower the score.  If the score is 0 or the player has no lives. Loses! 
 
 
