@@ -3,7 +3,7 @@
 ## Description
 The objective of the game is to lead the brick trought the race without collisioning with other bricks.
 
-The player might dodge the obstacles during the race and will only have 3 oportunities to win the game. 
+The player has to dodge the obstacles during the race and will only have 3 oportunities to win the game. 
 
 
  • controllers:
