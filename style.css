@@ -1,0 +1,117 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 40px 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+div.start h1 {
+  font-size: 40px;
+  text-align: center;
+  margin :auto;
+}
+h1 {
+
+}
+
+h2 {}
+
+h3 {}
+
+p {
+  margin: 0;
+}
+
+
+
+/* ---- layout ---- */
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+/* ---- components ---- */
+
+.game {
+  text-align: right;
+  display: flex;
+}
+
+.game header {
+  margin: 40px 40px 0 20px;
+  flex-wrap: wrap;
+
+}
+
+header div.score{
+  margin-bottom: 50px;
+}
+
+.game .label {
+  font-weight: bold;
+}
+
+.game .value {
+  font-style: italic;
+}
+
+.game .canvas {
+  flex: 1;
+}
+
+main {
+  background: lightgray;
+  height: 90%;
+  width:45%;
+}
+html {
+  background:grey;
+}
+
+canvas {
+  border:1px solid black;
+  margin: 40px auto;
+
+}
+
+main button {
+  display: flex;
+}
+
+div.start{
+  margin: 0 auto;
+
+}
+
+main {
+  margin: auto;
+
+}
