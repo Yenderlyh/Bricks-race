@@ -1,0 +1,26 @@
+/* ---- layout ---- */
+
+html, body {
+    height: 100%;
+    background:grey;
+
+}
+  
+.container {
+    margin: 0 20px;
+}
+  
+@media (min-width: 768px) {
+    .container {
+      max-width: 728px;
+      margin: 0 auto;
+    }
+}
+main {
+    background: lightgray;
+    height: 90%;
+    width:45%;
+}
+
+  
+  

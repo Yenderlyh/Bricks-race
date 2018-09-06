@@ -1,0 +1,14 @@
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+div.start h1 {
+  font-size: 40px;
+  text-align: center;
+  margin :auto;
+}

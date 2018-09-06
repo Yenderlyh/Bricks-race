@@ -21,13 +21,15 @@ function main() {
   function buildSplash() {
 
     splashMain = buildDom(`
-      <main>
-        <div class = 'start'>  
+    <main class= "game container">
+      <canvas class="bricks"></canvas>
+        <div class = 'box'>  
           <h1>Bricks race</h1>
           <button>Play</button>
+          <audio autoplay src="https://www.youtube.com/embed/jPZMFzPEQc8"></audio>
         <div>
-      </main>
-    `);
+    </main>
+  `);
     document.body.appendChild(splashMain);
 
     var button = splashMain.querySelector('button');
@@ -45,6 +47,9 @@ function main() {
 
     game = new Game();
     game.start();
+    game.onOver(function () {
+      gameOver(game.score);
+    });
   }
 
   function destroyGame() {
@@ -61,11 +66,14 @@ function main() {
   function buildGameOver(score) {
 
     gameOverMain = buildDom(`
-      <main>
-        <h1>Game over</h1>
-        <p>Your score: <span></span></p>
-        <button>Play again</button>
+      <main class= "game container">
+        <div class="box" >
+          <h1>Game over</h1>
+          <p>Your score: <span></span></p>
+          <button>Play again</button>
+        <div>
       </main>
+      
     `);
 
     var button = gameOverMain.querySelector('button');

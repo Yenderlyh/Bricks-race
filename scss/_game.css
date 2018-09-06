@@ -1,0 +1,32 @@
+/* ---- Game ---- */
+
+.game {
+    text-align: right;
+    display: flex;
+  }
+  
+  .game header {
+    margin: 40px 40px 0 20px;
+    flex-wrap: wrap;
+  
+  }
+  
+  header div.score{
+    margin-bottom: 50px;
+  }
+  
+  .game .label {
+    font-weight: bold;
+  }
+  
+  .game .value {
+    font-style: italic;
+  }
+  
+  .game .canvas {
+    flex: 1;
+  }
+  canvas {
+    border:1px solid black;
+    margin: 40px auto;
+  }
