@@ -34,12 +34,11 @@ Game.prototype.start = function() {
           <span class="value"></span>
         </div>
         <div class="hidden">
-        <img id="carro" src="https://image.ibb.co/k83jhz/imageedit_11_8498164966.png" alt="carro" border="0">
-        <img id="enemy"src="https://image.ibb.co/cALKFK/imageedit_11_8498164966.png" alt="carro" border="0"></a><br />
+          <img id="carro" src="https://image.ibb.co/k83jhz/imageedit_11_8498164966.png" alt="carro" border="0">
+          <img id="enemy"src="https://image.ibb.co/cALKFK/imageedit_11_8498164966.png" alt="carro" border="0"></a><br />
         </div>
         <audio class= "musicGame"><source src="./worldRunner.mp3" type="audio/mpeg"></audio>
         <audio class= "crushSound"><source src="./crush.mp3" type="audio/mpeg"></audio>
-
       </header>
     </main>
   `);
@@ -58,7 +57,7 @@ Game.prototype.start = function() {
   self.canvasElement.setAttribute('width', self.width);
   self.canvasElement.setAttribute('height', self.height);
 
-  self.player = new Player (self.canvasElement, 3);
+  self.player = new Player (self.canvasElement, 5);
   self.livesElement.innerText = self.player.lives;
   self.scoreElement.innerText = self.score;
   self.timeElement.innerText = self.time;
@@ -141,6 +140,7 @@ Game.prototype.onOver = function (callback) {
 
 Game.prototype.gameOver = function () {
   var self = this;
+
   self.gameIsOver = true;
   self.onGameOverCallback();
 };
@@ -170,14 +170,6 @@ Game.prototype.countScore = function () {
     }
   },8000); 
 }
-
-// Game.prototype.countLives = function () {
-//   var self = this;
-//   self.livesElement.innerText = self.player.lives;
-//   if (self.player.collidesWithEnemy(item)) {
-//     self.player.lives = self.player.lives--;
-//   }
-// }
 
 
 

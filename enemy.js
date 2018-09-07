@@ -24,8 +24,7 @@ Enemy.prototype.draw = function () {
   self.image = document.getElementById ("enemy")
   self.ctx.drawImage(self.image, self.x - self.size, self.y - self.size, self.size, self.size)
 
-  // self.ctx.fillStyle = 'darkgrey';
-  // self.ctx.fillRect(self.x - self.size, self.y - self.size, self.size, self.size);
+ 
 
 };
 
