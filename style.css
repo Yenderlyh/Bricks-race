@@ -27,9 +27,9 @@ html {
 body {
   background-image: url("https://image.ibb.co/hu4Pze/imageedit_15_7436764296.png");
   background-repeat: no-repeat;
-  background-size: 55%;
+  background-size: 650px;
   background-position: center;
-  background-position-y:30px;
+  background-position-y:72px;
   position: absolute;
   background-color: rgb(1, 1, 20);
 }
@@ -64,15 +64,15 @@ html, body {
 }
 main {
   background:lightgrey;
-  width: 32%;  
-  height: 78%;
+  width: 389px;  
+  height: 464px;
   background-image: url("https://image.ibb.co/fkVEHz/imageedit_8_3893817864_1.png");
   background-position-x: -40px;
   background-position-y:10px;
   background-size:125%;
   background-repeat:no-repeat;
   position: relative;
-  top: 48px;
+  top: 107px;
 }
 body div.box p {
   text-align: center;
