@@ -11,8 +11,9 @@ function Game() {
 }
 
 Game.prototype.start = function() {
-  var self = this;
-
+  var self = this; 
+  var musicGame;
+  var crush;
   self.gameMain = buildDom(`
     <main class="game container">
       <div class="canvas">
@@ -36,14 +37,16 @@ Game.prototype.start = function() {
         <img id="carro" src="https://image.ibb.co/k83jhz/imageedit_11_8498164966.png" alt="carro" border="0">
         <img id="enemy"src="https://image.ibb.co/cALKFK/imageedit_11_8498164966.png" alt="carro" border="0"></a><br />
         </div>
+        <audio class= "musicGame"><source src="./worldRunner.mp3" type="audio/mpeg"></audio>
+        <audio class= "crushSound"><source src="./crush.mp3" type="audio/mpeg"></audio>
+
       </header>
     </main>
   `);
-
-
+  musicGame = self.gameMain.querySelector('audio');
+  musicGame.autoplay = true;
   self.canvasParentElement = self.gameMain.querySelector ('.canvas');
   self.canvasElement = self.gameMain.querySelector('canvas');
-
   self.livesElement = self.gameMain.querySelector('.lives .value');
   self.scoreElement = self.gameMain.querySelector('.score .value');
   self.timeElement = self.gameMain.querySelector('.time .value');
@@ -83,8 +86,8 @@ Game.prototype.startLoop = function () {
   function loop() {
 
     var lane = self.lanes[Math.floor(Math.random()*self.lanes.length)]
-    if (Math.random() > 0.98) {
-      self.enemies.push(new Enemy(self.canvasElement, lane, 3));
+    if (Math.random() > 0.90) {
+      self.enemies.push(new Enemy(self.canvasElement, lane, 5));
     } 
 
     self.player.update();
@@ -97,7 +100,6 @@ Game.prototype.startLoop = function () {
     })
     
     self.checkIfEnemiesCollidedPlayer();
-
     ctx.clearRect(0, 0, self.width, self.height);
     self.player.update();
     self.player.draw();

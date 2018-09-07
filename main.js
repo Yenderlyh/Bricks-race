@@ -11,8 +11,9 @@ function main() {
 
   var splashMain;
   var gameOverMain;
-
   var game;
+  var musicMain;
+  var musicGameOver;
 
   //state transitions
 
@@ -20,20 +21,25 @@ function main() {
 
   function buildSplash() {
 
+    
     splashMain = buildDom(`
     <main class= "game container">
-      <canvas class="bricks"></canvas>
-        <div class = 'box'>  
-          <h1>Bricks race</h1>
-          <button>Play</button>
-          <audio autoplay src="https://www.youtube.com/embed/jPZMFzPEQc8"></audio>
-        <div>
+      <div class = 'box'>  
+        <h1>Bricks race</h1>
+        <button>Press Start</button>
+      <div>
+      <audio class="musicMain"><source src="./mainMusic.mp3" type="audio/mpeg"></audio>
     </main>
   `);
     document.body.appendChild(splashMain);
 
     var button = splashMain.querySelector('button');
     button.addEventListener('click', startGame);
+
+    musicMain = splashMain.querySelector('.musicMain');
+    musicMain.autoplay = true;
+
+
   }
 
   function destroySplash() {
@@ -42,6 +48,7 @@ function main() {
   // -- game
 
   function startGame() {
+    
     destroySplash();
     destroyGameOver();
 
@@ -71,13 +78,18 @@ function main() {
           <h1>Game over</h1>
           <p>Your score: <span></span></p>
           <button>Play again</button>
+          <audio class="musicGameOver"><source src="./musicGameOver.mp3" type="audio/mpeg"></audio>
         <div>
       </main>
       
     `);
 
     var button = gameOverMain.querySelector('button');
-    button.addEventListener('click', startGame);    
+    button.addEventListener('click', startGame);  
+
+    musicGameOver = gameOverMain.querySelector('.musicGameOver');
+    musicGameOver.autoplay = true;
+ 
     
     var span = gameOverMain.querySelector('span');
     span.innerText = score;
