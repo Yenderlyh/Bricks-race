@@ -28,7 +28,7 @@ body {
   background-image: url("https://image.ibb.co/hu4Pze/imageedit_15_7436764296.png");
   background-repeat: no-repeat;
   background-size: 55%;
-  background-position-x: 290px;
+  background-position: center;
   position: absolute;
   background-color: rgb(1, 1, 20);
 }
