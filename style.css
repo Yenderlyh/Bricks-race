@@ -137,7 +137,8 @@ h1 {
     background-image: url("https://image.ibb.co/dfYZhz/fondo.png");
     background-repeat: unset;
     background-size: 62px;
-    height: 97%;
+    width: 350px;
+    height: 450px;
     margin-top: 10px;
   }
 
